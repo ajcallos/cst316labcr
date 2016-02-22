@@ -58,7 +58,7 @@ class ServerSolution implements AccountServer {
 			acc = new Savings(name, balance);
 
 		} else {
-			throw new IllegalArgumentException("Bad account type:" + type);
+			throw new IllegalArgumentException("Bad account type: " + type);
 		}
 		try {
 			accountMap.put(acc.getName(), acc);
@@ -115,7 +115,7 @@ class ServerSolution implements AccountServer {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new IOException("Could not write file:" + fileName);
+			throw new IOException("Could not write file: " + fileName);
 		} finally {
 			if (out != null) {
 				try {
