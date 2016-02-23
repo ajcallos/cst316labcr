@@ -1,5 +1,20 @@
+/*
+ * File: Account.java
+ * Author: Dr. Kevin Gary?
+ * J       Jacob Gersztyn
+ * Date: 2016-02-20
+ *
+ * Description: This handles the framework for which specific accounts will
+ * build off of
+ */
 package banking.primitive.core;
 
+/**
+ * Class: Account
+ *
+ * Description: Definition of the Constructor and Methods an account has to
+ * provide
+ */
 public abstract class Account implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -11,11 +26,27 @@ public abstract class Account implements java.io.Serializable {
     protected String name;
     private State state;
 
+    /**
+     * Method: Constructor with single String
+     * Inputs: String n that designates the name of the account
+     * Returns: Created account object
+     *
+     * Description: Constructor which sets the name and sets state to Open
+     */
     protected Account(String n) {
         name = n;
         state = State.OPEN;
     }
 
+    /**
+     * Method: Constructor with String and float
+     * Inputs: String n that designates the name of the account
+     *         float b that denotes the starting balance
+     * Returns: Created account object
+     *
+     * Description: Constructor which sets the name and sets the starting
+     * balance
+     */
     protected Account(String n, float b) {
         this(n); 
         balance = b;
