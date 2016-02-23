@@ -1,3 +1,10 @@
+/*
+  File:	AccountServerFactory.java
+  Author:	Dr. Kevin Gary
+  Date:	2-20-2016
+  
+  Description: Serves new Serversolution objects 
+*/
 package banking.primitive.core;
 
 
