@@ -26,9 +26,9 @@ class ServerSolution implements AccountServer {
 				Integer sizeI = (Integer) in.readObject();
 				int size = sizeI.intValue();
 				for (int i=0; i < size; i++) {
-					Account acc = (Account) in.readObject();
-					if (acc != null)
-						accountMap.put(acc.getName(), acc);
+					Account someAccount = (Account) in.readObject();
+					if (someAccount != null)
+						accountMap.put(someAccount.getName(), someAccount);
 				}
 			}
 		} catch (Exception e) {
