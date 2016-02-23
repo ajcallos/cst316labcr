@@ -12,7 +12,7 @@ public interface AccountServer {
 		@param type must be one of Savings or Checking
 		@param name leading or trailing whitespace is removed
 		@param balance must be non-negative
-		@throws IllegalArgumentException if the account type is invalid or the balance is non-negative.
+		@throws IllegalArgumentException if the account type is invalid or the balance is negative.
 		@return boolean true if the account was created and stored, false otherwise
 	*/
 	public boolean	newAccount(String type, String name, float balance) throws IllegalArgumentException;
